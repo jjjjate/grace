@@ -1,6 +1,6 @@
 import React from "react";
 import {Route, Routes} from "react-router-dom";
-import Signin from "./components/Signin";
+import SignIn from "./components/SignIn";
 import Signup from "./components/Signup";
 import Account from "./components/Account";
 import Home from "./pages/Home";
@@ -16,7 +16,7 @@ function App() {
       <AuthContextProvider>
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/login" element={<Signin />} />
+          <Route path="/login" element={<SignIn />} />
           <Route path="/signup" element={<Signup />} />
           <Route path="/account" element={
             <ProtectedRoute>
