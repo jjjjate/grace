@@ -6,13 +6,13 @@ import Account from "./components/Account";
 import Home from "./pages/Home";
 import {AuthContextProvider} from "./context/AuthContext";
 import ProtectedRoute from "./components/ProtectedRoute";
+import Navbar from "./components/Navbar";
+import Videos from "./pages/Videos";
 
 function App() {
   return (
     <div>
-      <h1 className="text-center text-3xl font-bold">
-        auth & context
-      </h1>
+      <Navbar />
       <AuthContextProvider>
         <Routes>
           <Route path="/" element={<Home />} />
@@ -24,6 +24,7 @@ function App() {
             </ProtectedRoute>
           }
           />
+          <Route path="/video" element={<Videos />} />
         </Routes>
       </AuthContextProvider>
     </div>
