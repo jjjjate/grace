@@ -8,6 +8,7 @@ import {AuthContextProvider} from "./context/AuthContext";
 import ProtectedRoute from "./components/ProtectedRoute";
 import Navbar from "./components/Navbar";
 import Videos from "./pages/Videos";
+import VideoDetail from "./pages/VideoDetail";
 
 function App() {
   return (
@@ -25,6 +26,8 @@ function App() {
           }
           />
           <Route path="/video" element={<Videos />} />
+          <Route path="/video/:id" element={<Videos />} />
+          <Route path="/video/:videoId" element={<VideoDetail />} />
         </Routes>
       </AuthContextProvider>
     </div>
