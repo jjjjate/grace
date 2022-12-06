@@ -34,32 +34,30 @@ export const Videos = () => {
         setAfternoon(res.data.items[1].id)
         setWednesday(res.data.items[2].id)
         setFriday(res.data.items[3].id)
-
       })
       .catch(() => {});
   }, []);
-
-  console.log(videoList);
 
   // videoList.map((x) => {
   //   videoId.push(x.id)
   // })
   //
   // console.log(videoId);
+  const mornings = morning;
 
   useEffect(() => {
     axios
       .get(
-        `https://www.googleapis.com/youtube/v3/playlistItems?part=snippet&playlistId=${morning}&maxResults=20&key=${API}`
+        `https://www.googleapis.com/youtube/v3/playlistItems?part=snippet&playlistId=${mornings}&maxResults=20&key=${API}`
       )
       .then((res) => {
         console.log(res);
-        setMorning(res.data.items);
+        setVideoInfo(res.data.items);
       })
       .catch(() => {});
   }, [videoList]);
 
-  console.log(morning)
+  console.log(videoInfo)
 
   return (
     <div>
