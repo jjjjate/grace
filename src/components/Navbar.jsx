@@ -2,11 +2,17 @@ import React from "react";
 
 const Navbar = () => {
   return (
-    <div className="flex items-center justify-between p-4 z-[100]">
-      <h1>logo</h1>
+    <div className="container mx-auto flex p-4 z-[100] justify-between">
+      <div className="">
+        <img className="logo w-60" src='/img/Logo.png' alt="logo"/>
+      </div>
+      <div className='justify-between'>
+        <button>예배안내</button>
+        <button>설교와 찬양</button>
+        <button>교회학교</button>
+        <button>교회소식</button>
+      </div>
       <div>
-        <button>로그인</button>
-        <button>회원가입</button>
       </div>
     </div>
   )

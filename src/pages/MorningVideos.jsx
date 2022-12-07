@@ -33,9 +33,9 @@ export const MorningVideos = () => {
   const firstVideo = `https://www.youtube.com/watch?v=${videoId[0]}`;
 
   return (
-    <div>
+    <div className="container mx-auto">
       <h2>VideoMorning</h2>
-      <div className="container mx-auto">
+      <div>
         <ReactPlayer
           url={firstVideo}
           controls={true}

@@ -12,6 +12,7 @@ import MorningVideos from "./pages/MorningVideos";
 import AfternoonVideos from "./pages/AfternoonVideos";
 import WednesdayVideos from "./pages/WednesdayVideos";
 import FridayVideos from "./pages/FrideyVideos";
+import Footer from './components/Footer';
 
 function App() {
   return (
@@ -35,6 +36,7 @@ function App() {
           <Route path="/video/friday" element={<FridayVideos />} />
         </Routes>
       </AuthContextProvider>
+      <Footer />
     </div>
   );
 }
