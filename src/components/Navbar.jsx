@@ -7,10 +7,10 @@ const Navbar = () => {
         <img className="logo w-60" src='/img/Logo.png' alt="logo"/>
       </div>
       <div className='justify-between'>
-        <button>예배안내</button>
-        <button>설교와 찬양</button>
-        <button>교회학교</button>
-        <button>교회소식</button>
+        <button>first</button>
+        <button>second</button>
+        <button>third</button>
+        <button>fourth</button>
       </div>
       <div>
       </div>
