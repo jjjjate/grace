@@ -1,6 +1,6 @@
 import React, {useEffect, useState} from "react";
 import axios from "axios";
-// import {useParams} from "react-router-dom";
+import {Link} from "react-router-dom";
 
 const API = "AIzaSyB8Qzow1XzdvBiLTO6D86SwR1_j3JiYeQU"
 // const channelId ="UCpNfYpL9wvjEwWDJikG1KUQ"
@@ -14,13 +14,6 @@ const channelId ="UCIUfR-2qcpWqgAIfZJXOLWA"  /* 수빙 */
 export const Videos = () => {
   const [videoList, setVideoList] = useState([]);
   const [videoInfo, setVideoInfo] = useState([]);
-  const [morning, setMorning] = useState([]);
-  const [afternoon, setAfternoon] = useState([]);
-  const [wednesday, setWednesday] = useState([]);
-  const [friday, setFriday] = useState([]);
-
-  // let { id } = useState();
-  // let videoId = [];
 
   useEffect(() => {
     axios
@@ -30,38 +23,59 @@ export const Videos = () => {
       .then((res) => {
         console.log(res);
         setVideoList(res.data.items);
-        setMorning(res.data.items[0].id)
-        setAfternoon(res.data.items[1].id)
-        setWednesday(res.data.items[2].id)
-        setFriday(res.data.items[3].id)
       })
       .catch(() => {});
   }, []);
+  console.log(videoList)
 
-  // videoList.map((x) => {
-  //   videoId.push(x.id)
-  // })
+  const videoIds = [];
+  for (let i=0; i<videoList.length; i++) {
+    videoIds.push(/*"&id=" + */videoList[i][Object.keys(videoList[i])[2]]);
+  }
+
+  console.log(videoIds)
+
+  // const videoIdString = videoIds.join("");
+
+  // console.log(videoIdString)
+
+  // useEffect(() => {
+  //   axios
+  //     .get(
+  //       `https://www.googleapis.com/youtube/v3/videos?part=snippet,statistics${videoIdString}&maxResults=20&key=${API}`
+  //     )
+  //     .then((res) => {
+  //       console.log(res);
+  //       setVideoInfo(res.data.items);
+  //     })
+  //     .catch(() => {});
+  // }, [videoList]);
   //
-  // console.log(videoId);
-  const mornings = morning;
-
-  useEffect(() => {
-    axios
-      .get(
-        `https://www.googleapis.com/youtube/v3/playlistItems?part=snippet&playlistId=${mornings}&maxResults=20&key=${API}`
-      )
-      .then((res) => {
-        console.log(res);
-        setVideoInfo(res.data.items);
-      })
-      .catch(() => {});
-  }, [videoList]);
-
-  console.log(videoInfo)
+  // console.log(videoInfo)
 
   return (
     <div>
-      <h1>VideoPages</h1>
+      <h1>Videos</h1>
+      <div>
+        <Link to="/video/morning">
+          <button>모닝</button>
+        </Link>
+      </div>
+      <div>
+        <Link to="/video/afternoon">
+          <button>눈</button>
+        </Link>
+      </div>
+      <div>
+        <Link to="/video/wednesday">
+          <button>웬</button>
+        </Link>
+      </div>
+      <div>
+        <Link to="/video/friday">
+          <button>프라이</button>
+        </Link>
+      </div>
     </div>
   )
 }

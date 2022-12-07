@@ -8,7 +8,10 @@ import {AuthContextProvider} from "./context/AuthContext";
 import ProtectedRoute from "./components/ProtectedRoute";
 import Navbar from "./components/Navbar";
 import Videos from "./pages/Videos";
-import VideoDetail from "./pages/VideoDetail";
+import MorningVideos from "./pages/MorningVideos";
+import AfternoonVideos from "./pages/AfternoonVideos";
+import WednesdayVideos from "./pages/WednesdayVideos";
+import FridayVideos from "./pages/FrideyVideos";
 
 function App() {
   return (
@@ -26,8 +29,10 @@ function App() {
           }
           />
           <Route path="/video" element={<Videos />} />
-          <Route path="/video/:id" element={<Videos />} />
-          <Route path="/video/:videoId" element={<VideoDetail />} />
+          <Route path="/video/morning" element={<MorningVideos />} />
+          <Route path="/video/afternoon" element={<AfternoonVideos />} />
+          <Route path="/video/wednesday" element={<WednesdayVideos />} />
+          <Route path="/video/friday" element={<FridayVideos />} />
         </Routes>
       </AuthContextProvider>
     </div>
