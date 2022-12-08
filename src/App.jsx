@@ -14,9 +14,9 @@ import WednesdayVideos from "./pages/WednesdayVideos";
 import FridayVideos from "./pages/FrideyVideos";
 import Footer from './components/Footer';
 
-function App() {
+const App = () => {
   return (
-    <div>
+    <>
       <Navbar />
       <AuthContextProvider>
         <Routes>
@@ -37,7 +37,7 @@ function App() {
         </Routes>
       </AuthContextProvider>
       <Footer />
-    </div>
+    </>
   );
 }
 

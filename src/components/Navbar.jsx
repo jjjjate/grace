@@ -1,21 +1,37 @@
-import React from "react";
+import React, { useState } from 'react';
+import {Link} from "react-router-dom";
+import NavLinks from "./navbars/NavLinks";
 
 const Navbar = () => {
+  const [open, setOpen] =useState(false)
   return (
-    <div className="container mx-auto flex p-4 z-[100] justify-between">
-      <div className="">
-        <img className="logo w-60" src='/img/Logo.png' alt="logo"/>
+    <nav className="bg-white">
+      <div className="flex items-center font-medium justify-around shadow">
+        <div className="z-50 p-5 md:w-auto w-full flex justify-between">
+          <Link to="/">
+            <img
+              className="cursor-pointer h-10"
+              // src="img/Logo.png"
+              alt="logo"
+            />
+          </Link>
+          <div className="text-3xl md:hidden" onClick={()=>setOpen(!open)}>
+            <ion-icon name={`${ open ? "close" : "menu" }`}></ion-icon>
+          </div>
+        </div>
+        <ul className="md:flex hidden items-end gap-2">
+          <NavLinks />
+        </ul>
+        <ul className={`
+        md:hidden bg-white absolute w-full h-full
+        bottom-0 py-24 pl-4 duration-500
+        ${ open ? "left-0" : "left-[-100%]"}
+        `}>
+          <NavLinks />
+        </ul>
       </div>
-      <div className='justify-between'>
-        <button>first</button>
-        <button>second</button>
-        <button>third</button>
-        <button>fourth</button>
-      </div>
-      <div>
-      </div>
-    </div>
+    </nav>
   )
 }
 
-export default Navbar
+export default Navbar;
