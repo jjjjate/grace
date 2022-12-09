@@ -1,10 +1,10 @@
 import React from "react";
-import {Route, Routes} from "react-router-dom";
+import { Route, Routes } from "react-router-dom";
 import SignIn from "./components/SignIn";
 import Signup from "./components/Signup";
 import Account from "./components/Account";
 import Home from "./pages/Home";
-import {AuthContextProvider} from "./context/AuthContext";
+import { AuthContextProvider } from "./context/AuthContext";
 import ProtectedRoute from "./components/ProtectedRoute";
 import Navbar from "./components/Navbar";
 import Videos from "./pages/Videos";

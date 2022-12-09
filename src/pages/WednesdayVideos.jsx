@@ -34,7 +34,6 @@ export const WednesdayVideos = () => {
 
   return (
     <div>
-      <h2>VideoMorning</h2>
       <div className="container mx-auto">
         <ReactPlayer
           url={firstVideo}
@@ -60,14 +59,6 @@ export const WednesdayVideos = () => {
             </div>
           )
         })}
-      </div>
-      <div>
-        <button
-          className="border border-blue-500 bg-blue-600
-            hover:bg-blue-500 text-white"
-        >
-          유튜브 바로가기
-        </button>
       </div>
     </div>
   )

@@ -1,6 +1,6 @@
-import React, {useEffect, useState} from "react";
+import React, { useEffect, useState } from "react";
 import axios from "axios";
-import {Link} from "react-router-dom";
+import { Link } from "react-router-dom";
 
 const API = "AIzaSyB8Qzow1XzdvBiLTO6D86SwR1_j3JiYeQU"
 // const channelId ="UCpNfYpL9wvjEwWDJikG1KUQ"
@@ -13,7 +13,6 @@ const channelId ="UCIUfR-2qcpWqgAIfZJXOLWA"  /* 수빙 */
 // console.log(fetchUrl)
 export const Videos = () => {
   const [videoList, setVideoList] = useState([]);
-  const [videoInfo, setVideoInfo] = useState([]);
 
   useEffect(() => {
     axios

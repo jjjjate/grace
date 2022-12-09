@@ -1,13 +1,17 @@
 import React from "react";
 import Sliders from "../components/Sliders";
-import Cards from "../components/navbars/Cards";
+import Cards from "../components/homes/Cards";
+import Middle from "../components/homes/Middle";
+import MainVideo from "../components/homes/MainVideo";
 
 const Home = () => {
   return (
-    <div>
+    <>
       <Sliders />
       <Cards />
-    </div>
+      <Middle />
+      <MainVideo />
+    </>
   )
 }
 
