@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from "react";
-import { AiOutlineVerticalRight, AiOutlineVerticalLeft } from "react-icons/ai";
+// import { AiOutlineVerticalRight, AiOutlineVerticalLeft } from "react-icons/ai";
 
 const featuredProducts = [
   "img/hero_1.png",
@@ -27,7 +27,6 @@ export default function Sliders() {
     return () => {
       pauseSlider();
     };
-    // eslint-disable-next-line
   }, []);
 
   const startSlider = () => {
@@ -45,31 +44,31 @@ export default function Sliders() {
     setCurrentIndex(count);
     slideRef.current.classList.add("fade-anim");
   };
-  const handleOnPrevClick = () => {
-    const productsLength = featuredProducts.length;
-    count = (currentIndex + productsLength - 1) % productsLength;
-    setCurrentIndex(count);
-    slideRef.current.classList.add("fade-anim");
-  };
+  // const handleOnPrevClick = () => {
+  //   const productsLength = featuredProducts.length;
+  //   count = (currentIndex + productsLength - 1) % productsLength;
+  //   setCurrentIndex(count);
+  //   slideRef.current.classList.add("fade-anim");
+  // };
 
   return (
     <div ref={slideRef} className="flex place-content-center w-full select-none">
       <div className="aspect-w-16 aspect-h-9">
         <img src={featuredProducts[currentIndex]} alt="carousel" />
-        <div className="relative w-full transform -translate-y-1/2 px-3 flex place-content-around">
-          <button
-            className="bg-black text-white p-1 rounded-full bg-opacity-30 cursor-pointer hover:bg-opacity-100 transition"
-            onClick={handleOnPrevClick}
-          >
-            <AiOutlineVerticalRight size={30} />
-          </button>
-          <button
-            className="bg-black text-white p-1 rounded-full bg-opacity-30 cursor-pointer hover:bg-opacity-100 transition"
-            onClick={handleOnNextClick}
-          >
-            <AiOutlineVerticalLeft size={30} />
-          </button>
-        </div>
+        {/*<div className="relative w-full -top-6 transform -translate-y-1/2 px-3 flex place-content-around">*/}
+        {/*  <button*/}
+        {/*    className="bg-black text-white p-1 rounded-full bg-opacity-30 cursor-pointer hover:bg-opacity-100 transition"*/}
+        {/*    onClick={handleOnPrevClick}*/}
+        {/*  >*/}
+        {/*    <AiOutlineVerticalRight size={30} />*/}
+        {/*  </button>*/}
+        {/*  <button*/}
+        {/*    className="bg-black text-white p-1 rounded-full bg-opacity-30 cursor-pointer hover:bg-opacity-100 transition"*/}
+        {/*    onClick={handleOnNextClick}*/}
+        {/*  >*/}
+        {/*    <AiOutlineVerticalLeft size={30} />*/}
+        {/*  </button>*/}
+        {/*</div>*/}
       </div>
     </div>
   );
