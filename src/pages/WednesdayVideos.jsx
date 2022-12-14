@@ -3,7 +3,7 @@ import axios from "axios";
 import ReactPlayer from "react-player";
 
 const API = "AIzaSyB8Qzow1XzdvBiLTO6D86SwR1_j3JiYeQU"
-const playListId = "PLOmHK6C3YL7z2MTDtEcFmPAIzezqTFxnd"
+const playListId = "PLed7M_h-x5SVaUIDkp-QajISmPcJ6Qtan"
 
 export const WednesdayVideos = () => {
 

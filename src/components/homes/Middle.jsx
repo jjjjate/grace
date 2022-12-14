@@ -3,7 +3,7 @@ import React from "react";
 const Middle = () => {
   return (
     <div style={{background:"url(img/bg-main002.jpg)"}}>
-      <div className="container mx-auto px-16 text-center py-5">
+      <div className="container mx-auto px-16 text-center">
         <h1 className="font-bold py-10 text-3xl">타이틀</h1>
         <p className="py-10">
           Lorem ipsum dolor sit amet, consectetur adipisicing elit.

@@ -3,9 +3,9 @@ import axios from "axios";
 import { Link } from "react-router-dom";
 
 const API = "AIzaSyB8Qzow1XzdvBiLTO6D86SwR1_j3JiYeQU"
-// const channelId ="UCpNfYpL9wvjEwWDJikG1KUQ"
+const channelId ="UCpNfYpL9wvjEwWDJikG1KUQ"
 // const channelId ="UCUj6rrhMTR9pipbAWBAMvUQ" 침착
-const channelId ="UCIUfR-2qcpWqgAIfZJXOLWA"  /* 수빙 */
+// const channelId ="UCIUfR-2qcpWqgAIfZJXOLWA"  /* 수빙 */
 
   // `https://www.googleapis.com/youtube/v3/search?part=snippet&key=${API}&q=${channelId}&maxResult=20&type=video&videoEmbeddable=true`
 

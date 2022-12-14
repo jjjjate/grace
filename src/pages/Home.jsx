@@ -1,8 +1,9 @@
 import React from "react";
-import Sliders from "../components/Sliders";
+import Sliders from "../components/homes/Sliders";
 import Cards from "../components/homes/Cards";
 import Middle from "../components/homes/Middle";
 import MainVideo from "../components/homes/MainVideo";
+import Notice from '../components/homes/Notice';
 
 const Home = () => {
   return (
@@ -11,6 +12,7 @@ const Home = () => {
       <Cards />
       <Middle />
       <MainVideo />
+      <Notice />
     </>
   )
 }

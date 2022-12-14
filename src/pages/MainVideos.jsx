@@ -3,13 +3,12 @@ import axios from "axios";
 import ReactPlayer from "react-player";
 
 const API = "AIzaSyB8Qzow1XzdvBiLTO6D86SwR1_j3JiYeQU"
-const playListId = "PLOmHK6C3YL7wnROreNYEdFv6fSZAbH6hX"
-
-export const videoTitles = [];
+const playListId = "PLed7M_h-x5SUWWXvadq-Vi8QoQuhB7Fd-"
 
 const MainVideos = () => {
 
   const [mainVideo, setMainVideo] = useState([]);
+  const videoTitles = [];
 
   useEffect(() => {
     axios
@@ -37,10 +36,13 @@ const MainVideos = () => {
     })
   }
 
+  sessionStorage.setItem('title', `${videoTitles[0]}`)
+  console.log(value)
+
   const firstVideo = `https://www.youtube.com/watch?v=${videoId[0]}`;
 
   return (
-    <div>
+    <>
       <div className="container mx-auto">
         <ReactPlayer
           url={firstVideo}
@@ -51,18 +53,10 @@ const MainVideos = () => {
           height="80vh"
         />
       </div>
-      <div>
-        <a
-          className="border border-blue-500 bg-blue-600
-            hover:bg-blue-500 text-white"
-          href="https://www.youtube.com/@user-ib3bt2yo1h"
-          target="_blank"
-        >
-          유튜브 바로가기
-        </a>
-      </div>
-    </div>
+    </>
   )
 }
+
+export const value = sessionStorage.getItem("title")
 
 export default MainVideos
