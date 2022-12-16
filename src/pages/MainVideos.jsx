@@ -23,21 +23,12 @@ const MainVideos = () => {
 
   const videoId = [];
 
-
-  {
-    mainVideo.map((x) => {
-      videoId.push(x.snippet.resourceId.videoId)
-    })
-  }
-
-  {
-    mainVideo.map((x) => {
-      videoTitles.push(x.snippet.title)
-    })
+  for (let i = 0; i < mainVideo.length; i++) {
+    const videoIds = mainVideo[i];
+    videoId.push(`${videoIds.snippet.resourceId.videoId}`);
   }
 
   sessionStorage.setItem('title', `${videoTitles[0]}`)
-  console.log(value)
 
   const firstVideo = `https://www.youtube.com/watch?v=${videoId[0]}`;
 
