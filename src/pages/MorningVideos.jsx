@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
+import { Link } from 'react-router-dom';
+import Icons from '../components/videos/Icons';
 
 const API = "AIzaSyB8Qzow1XzdvBiLTO6D86SwR1_j3JiYeQU"
 const playListId = "PLOmHK6C3YL7wsSKr0teH_tUyXfesKYUdk"
@@ -7,8 +9,6 @@ const playListId = "PLOmHK6C3YL7wsSKr0teH_tUyXfesKYUdk"
 export const MorningVideos = () => {
 
   const [morningVideo, setMorningVideo] = useState([]);
-
-  const videoId = [];
 
   useEffect(() => {
     axios
@@ -20,6 +20,8 @@ export const MorningVideos = () => {
       })
       .catch(() => {});
   }, []);
+  
+  const videoId = [];
 
   for (let i = 0; i < morningVideo.length; i++) {
     const videoIds = morningVideo[i];
@@ -29,7 +31,8 @@ export const MorningVideos = () => {
   const videoLink = `https://www.youtube-nocookie.com/embed/`;
 
   return (
-    <div className="container mx-auto py-6">
+    <div className="container mx-auto px-16 py-16">
+      <Icons />
       <div>
         <div className="hidden lg:block">
           <div className="flex justify-center">
@@ -37,7 +40,7 @@ export const MorningVideos = () => {
               title="mainFrame"
               src={`${videoLink}${videoId[0]}`}
               width="90%"
-              height="600rem"
+              height="550rem"
               allowFullScreen
             />
           </div>
@@ -49,10 +52,21 @@ export const MorningVideos = () => {
             title="mainFrame"
             src={`${videoLink}${videoId[0]}`}
             width="100%"
-            height="400rem"
+            height="360rem"
             allowFullScreen
           />
         </div>
+      </div>
+      <div>
+        {morningVideo.slice(0,1).map((title, index) => {
+          return (
+            <div key={index}>
+              <h1>주일 오전 예배</h1>
+              <h1>{title.snippet.title}</h1>
+              <span>{title.snippet.publishedAt.replace('T', ' ').substring(0, 16)}</span>
+            </div>
+          )
+        })}
       </div>
       <div className="lg:block hidden">
         <div className="grid grid-cols-3 gap-4">
