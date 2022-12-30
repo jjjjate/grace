@@ -3,7 +3,7 @@ import axios from "axios";
 import Icons from '../components/videos/Icons';
 
 const API = "AIzaSyB8Qzow1XzdvBiLTO6D86SwR1_j3JiYeQU"
-const playListId = "PLOmHK6C3YL7wsSKr0teH_tUyXfesKYUdk"
+const playListId = "PLed7M_h-x5SUWWXvadq-Vi8QoQuhB7Fd-"
 
 export const MorningVideos = () => {
 
@@ -30,8 +30,8 @@ export const MorningVideos = () => {
   const videoLink = `https://www.youtube-nocookie.com/embed/`;
 
   return (
-    <div className="container mx-auto px-16 py-16">
-      <Icons />
+    <div className="container mx-auto md:px-16 md:py-8">
+      <Icons title="설교와 찬양" name="설교말씀" />
       <div>
         <div className="hidden lg:block">
           <div className="flex justify-center">
@@ -48,7 +48,7 @@ export const MorningVideos = () => {
       <div className="lg:hidden">
         <div>
           <iframe
-            title="mainFrame"
+            title="mainFrames"
             src={`${videoLink}${videoId[0]}`}
             width="100%"
             height="360rem"

@@ -13,7 +13,12 @@ import AfternoonVideos from "./pages/AfternoonVideos";
 import WednesdayVideos from "./pages/WednesdayVideos";
 import FridayVideos from "./pages/FrideyVideos";
 import Footer from './components/Footer';
-import { About } from './pages/About';
+import Service from './pages/Service';
+import AboutVision from './pages/AboutVision';
+import AboutWelcome from './pages/AboutWelcome';
+import AboutPeople from './pages/AboutPeople';
+import AboutYears from './pages/AboutYears';
+import AboutWay from './pages/AboutWay';
 
 const App = () => {
   return (
@@ -35,7 +40,12 @@ const App = () => {
           <Route path="/video/afternoon" element={<AfternoonVideos />} />
           <Route path="/video/wednesday" element={<WednesdayVideos />} />
           <Route path="/video/friday" element={<FridayVideos />} />
-          <Route path="/about" element={<About />} />
+          <Route path="/service" element={<Service />} />
+          <Route path="/about/vision" element={<AboutVision />} />
+          <Route path="/about/welcome" element={<AboutWelcome />} />
+          <Route path="/about/people" element={<AboutPeople />} />
+          <Route path="/about/years" element={<AboutYears />} />
+          <Route path="/about/way" element={<AboutWay />} />
         </Routes>
       </AuthContextProvider>
       <Footer />

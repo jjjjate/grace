@@ -1,22 +1,22 @@
 [
   {
-    "id": "123",
-    "link": "/"
+    "id": "은혜교회 비전",
+    "link": "/about/vision"
   },
   {
-    "id": "456",
-    "link": ""
+    "id": "담임목사 인사말",
+    "link": "/about/welcome"
   },
   {
-    "id": "789",
-    "link": ""
+    "id": "섬기는 사람들",
+    "link": "/about/people"
   },
   {
-    "id": "000",
-    "link": ""
+    "id": "교회연혁",
+    "link": "/about/years"
   },
   {
-    "id": "111",
-    "link": ""
+    "id": "오시는 길",
+    "link": "/about/way"
   }
 ]

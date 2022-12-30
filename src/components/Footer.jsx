@@ -6,7 +6,7 @@ const Footer = () => {
     <div style={{ background: '#717171' }} className="py-5">
       <div className='container mx-auto px-16 pb-4'>
         <div className='flex justify-between py-5'>
-          <img className="inline w-48" src="img/footer/Logo_White.png" alt="" />
+          <Link to="/"><img className="inline w-48" src="../img/footer/Logo_White.png" alt="" /></Link>
           <span className="text-local-gray py-3">
             <span className="border-r-2 px-2 border-local-gray">
               이용약관

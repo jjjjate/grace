@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import {Link} from "react-router-dom";
+import { Link } from "react-router-dom";
 import NavLinks from "./navbars/NavLinks";
 
 const Navbar = () => {
@@ -11,7 +11,7 @@ const Navbar = () => {
           <Link to="/">
             <img
               className="cursor-pointer h-10"
-              src="img/Logo.png"
+              src="../img/Logo.png"
               alt="logo"
             />
           </Link>
@@ -19,7 +19,7 @@ const Navbar = () => {
             <ion-icon name={`${ open ? "close" : "menu" }`}></ion-icon>
           </div>
         </div>
-        <ul className="md:flex hidden items-end gap-2">
+        <ul className="md:flex hidden items-end gap-1">
           <NavLinks />
         </ul>
         <ul className={`

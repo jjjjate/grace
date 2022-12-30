@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 
 const API = "AIzaSyB8Qzow1XzdvBiLTO6D86SwR1_j3JiYeQU"
-const playListId = "PLOmHK6C3YL7z2MTDtEcFmPAIzezqTFxnd"
+const playListId = "PLed7M_h-x5SVaUIDkp-QajISmPcJ6Qtan"
 
 export const WednesdayVideos = () => {
 
@@ -27,12 +27,13 @@ export const WednesdayVideos = () => {
     videoId.push(`${videoIds.snippet.resourceId.videoId}`);
   }
 
-  const videoLink = `https://www.youtube.com/embed/`;
+  const videoLink = `https://www.youtube-nocookie.com/embed/`;
 
   return (
     <div className="container mx-auto">
       <div className="flex justify-center">
         <iframe
+          title="mainFrame"
           src={`${videoLink}${videoId[0]}`}
           width="80%"
           height="700px"
@@ -46,6 +47,7 @@ export const WednesdayVideos = () => {
               <h2>{items.snippet.title}</h2>
               <span className="font-extralight">{items.snippet.publishedAt.replace('T', ' ').substring(0, 16)}</span>
               <iframe
+                title="mainFrames"
                 src={videoLink + items.snippet.resourceId.videoId}
                 width="100%"
                 height="250px"

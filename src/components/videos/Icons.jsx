@@ -1,20 +1,20 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-const Icons = () => {
+const Icons = ({title, name}) => {
   return (
     <div>
-      <div className="flex flex-none px-16">
+      <div className="flex flex-none md:px-8">
         <Link to="/home">
-          <img className="w-10" src="/img/home.svg" alt="homeLogo"/>
+          <img className="w-7" src="/img/home.svg" alt="homeLogo"/>
         </Link>
-        <img className="w-10 ml-4" src="/img/arrow.svg" alt="arrowLogo"/>
-        <p className="pt-2 ml-4 font-extrabold text-sm">설교와 찬양</p>
+        <img className="w-7 ml-2" src="/img/arrow.svg" alt="arrowLogo"/>
+        <p className="pt-1 ml-2 font-extrabold text-sm">{title}</p>
       </div>
       <div className="flex flex-none px-16 py-8">
-        <h1 className="font-extrabold text-4xl">설교말씀</h1>
+        <h1 className="font-extrabold text-3xl">{name}</h1>
       </div>
-      <div className="flex py-5 sm:px-16">
+      <div className="flex py-5 md:px-16">
         <div 
         className="text-center rounded-2xl text-white bg-orange-400 border-2 border-orange-400 w-22 text-sm
         hover:cursor-pointer"

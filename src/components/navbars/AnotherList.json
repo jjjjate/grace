@@ -1,18 +1,18 @@
 [
   {
-    "id": "안내",
-    "link": "/"
+    "id": "예배안내",
+    "link": "/service"
   },
   {
-    "id": "설찬",
+    "id": "설교찬양",
     "link": "/video"
   },
   {
-    "id": "학교",
-    "link": ""
+    "id": "교회학교",
+    "link": "/school"
   },
   {
-    "id": "소식",
-    "link": ""
+    "id": "교회소식",
+    "link": "/anounce"
   }
 ]
